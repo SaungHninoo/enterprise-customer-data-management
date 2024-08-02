@@ -77,8 +77,7 @@ To use the procedures and functions in the `customer_management_pkg` package, yo
    END;
 
 2. **Update an Existing Customer:**
-   ```sql
-BEGIN
+  BEGIN
     customer_management_pkg.update_customer(
         p_customer_id => 1,
         p_first_name => 'Jane',
