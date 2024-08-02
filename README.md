@@ -14,39 +14,6 @@ This repository contains PL/SQL scripts and other resources developed for the En
 ## Description
 
 ### Stored Procedures and Functions
-- `manage_customer_data.sql`: A script to manage customer data, including CRUD operations and business logic.
-
-### ETL Scripts
-- `data_integration.sql`: A script for extracting, transforming, and loading customer data from multiple sources.
-
-### Performance Optimization
-- `performance_tuning.sql`: A script for optimizing query performance, including indexing and partitioning.
-
-### Data Validation and Cleansing
-- `validate_clean_data.sql`: A script for validating and cleansing incoming data to ensure accuracy and consistency.
-
-### Reporting
-- `customer_reports.sql`: A script for generating comprehensive customer reports using Oracle BI Publisher and Power BI.
-
-### Deployment
-- `deployment_scripts.sql`: Scripts for deploying the database objects and PL/SQL code to the production environment.
-
-# Enterprise Customer Data Management System
-
-This repository contains PL/SQL scripts and other resources developed for the Enterprise Customer Data Management System project.
-
-## Contents
-
-- [Stored Procedures and Functions](stored_procedures)
-- [ETL Scripts](etl_scripts)
-- [Performance Optimization](optimization)
-- [Data Validation and Cleansing](data_validation)
-- [Reporting](reporting)
-- [Deployment](deployment)
-
-## Description
-
-### Stored Procedures and Functions
 
 #### `customer_management_pkg`
 
@@ -109,7 +76,39 @@ To use the procedures and functions in the `customer_management_pkg` package, yo
        );
    END;
 
+2. **Update an Existing Customer:**
+   ```sql
+BEGIN
+    customer_management_pkg.update_customer(
+        p_customer_id => 1,
+        p_first_name => 'Jane',
+        p_last_name => 'Doe',
+        p_email => 'jane.doe@example.com',
+        p_phone_number => '098-765-4321'
+    );
+END;
 
-## Usage
+3. **Get Customer Details:**
+   ```sql
+DECLARE
+    v_customer_info VARCHAR2(4000);
+BEGIN
+    v_customer_info := customer_management_pkg.get_customer(p_customer_id => 1);
+    DBMS_OUTPUT.PUT_LINE(v_customer_info);
+END;
 
-Instructions on how to use and run the scripts are provided in each respective folder.
+
+
+4. **Delete a Customer:**
+   ```sql
+BEGIN
+    customer_management_pkg.delete_customer(p_customer_id => 1);
+END;
+
+
+5. **Load Customer Data:**
+   ```sql
+BEGIN
+    customer_management_pkg.load_customers;
+END;
+
