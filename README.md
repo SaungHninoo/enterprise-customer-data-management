@@ -66,6 +66,9 @@ To use the procedures and functions in the `customer_management_pkg` package, yo
 **Examples:**
 
 1. **Add a New Customer:**
+
+   Adds a new customer to the `customers` table.
+
    ```sql
    BEGIN
        customer_management_pkg.add_customer(
@@ -75,39 +78,3 @@ To use the procedures and functions in the `customer_management_pkg` package, yo
            p_phone_number => '123-456-7890'
        );
    END;
-
-2. **Update an Existing Customer:**
-  BEGIN
-    customer_management_pkg.update_customer(
-        p_customer_id => 1,
-        p_first_name => 'Jane',
-        p_last_name => 'Doe',
-        p_email => 'jane.doe@example.com',
-        p_phone_number => '098-765-4321'
-    );
-END;
-
-3. **Get Customer Details:**
-   ```sql
-DECLARE
-    v_customer_info VARCHAR2(4000);
-BEGIN
-    v_customer_info := customer_management_pkg.get_customer(p_customer_id => 1);
-    DBMS_OUTPUT.PUT_LINE(v_customer_info);
-END;
-
-
-
-4. **Delete a Customer:**
-   ```sql
-BEGIN
-    customer_management_pkg.delete_customer(p_customer_id => 1);
-END;
-
-
-5. **Load Customer Data:**
-   ```sql
-BEGIN
-    customer_management_pkg.load_customers;
-END;
-
