@@ -1,6 +1,6 @@
-# PL/SQL Scripts Repository
+# Enterprise Customer Data Management System
 
-This repository contains a collection of PL/SQL scripts demonstrating various database development skills.
+This repository contains PL/SQL scripts and other resources developed for the Enterprise Customer Data Management System project.
 
 ## Contents
 
@@ -9,27 +9,27 @@ This repository contains a collection of PL/SQL scripts demonstrating various da
 - [Performance Optimization](optimization)
 - [Data Validation and Cleansing](data_validation)
 - [Reporting](reporting)
-- [Common Table Expressions (CTEs)](cte_examples)
+- [Deployment](deployment)
 
 ## Description
 
 ### Stored Procedures and Functions
-- `calculate_loyalty_points.sql`: A stored procedure for calculating customer loyalty points.
+- `manage_customer_data.sql`: A script to manage customer data, including CRUD operations and business logic.
 
 ### ETL Scripts
-- `etl_process.sql`: A script for extracting, transforming, and loading customer ratings.
+- `data_integration.sql`: A script for extracting, transforming, and loading customer data from multiple sources.
 
 ### Performance Optimization
-- `create_index.sql`: A script for creating an index to optimize query performance.
+- `performance_tuning.sql`: A script for optimizing query performance, including indexing and partitioning.
 
 ### Data Validation and Cleansing
-- `clean_data.sql`: A script for validating and cleansing raw rating data.
+- `validate_clean_data.sql`: A script for validating and cleansing incoming data to ensure accuracy and consistency.
 
 ### Reporting
-- `sales_report.sql`: A script for generating a monthly sales report.
+- `customer_reports.sql`: A script for generating comprehensive customer reports using Oracle BI Publisher and Power BI.
 
-### Common Table Expressions (CTEs)
-- `recursive_query.sql`: A CTE example for generating hierarchical data reports.
+### Deployment
+- `deployment_scripts.sql`: Scripts for deploying the database objects and PL/SQL code to the production environment.
 
 ## Usage
 
