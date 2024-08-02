@@ -1,0 +1,33 @@
+-- File: customer_management_pkg_spec.sql
+CREATE OR REPLACE PACKAGE customer_management_pkg AS
+    -- Procedure to add a new customer
+    PROCEDURE add_customer (
+        p_first_name IN VARCHAR2,
+        p_last_name IN VARCHAR2,
+        p_email IN VARCHAR2,
+        p_phone_number IN VARCHAR2
+    );
+
+    -- Procedure to update customer details
+    PROCEDURE update_customer (
+        p_customer_id IN NUMBER,
+        p_first_name IN VARCHAR2,
+        p_last_name IN VARCHAR2,
+        p_email IN VARCHAR2,
+        p_phone_number IN VARCHAR2
+    );
+
+    -- Function to retrieve customer details by ID
+    FUNCTION get_customer (
+        p_customer_id IN NUMBER
+    ) RETURN VARCHAR2;
+    
+    -- Procedure to delete a customer
+    PROCEDURE delete_customer (
+        p_customer_id IN NUMBER
+    );
+    
+    -- Procedure to load customer data from staging
+    PROCEDURE load_customers;
+END customer_management_pkg;
+/
